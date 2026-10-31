@@ -1,18 +1,22 @@
 {
   "name": "docker-node-prisma",
   "version": "1.0.0",
-  "description": "API Node.js + Prisma + PostgreSQL rodando em Docker",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy"
   },
   "dependencies": {
-    "@prisma/client": "^5.19.1",
-    "express": "^4.19.2"
+    "@prisma/client": "^6.19.3",
+    "express": "^4.21.0",
+    "prisma": "^6.19.3"
   },
   "devDependencies": {
-    "prisma": "^5.19.1"
+    "@vitest/coverage-v8": "^3.0.0",
+    "vitest": "^3.0.0"
   }
 }
